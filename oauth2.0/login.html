@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<div style="border: 1px solid red">
+    <table>
+        <form action="/login_action/" method="post">{% csrf_token %}
+
+            <tr>
+                <td>
+                    <label >用户名:</label>
+                </td>
+                <td>
+                    <input type = 'text' placeholder="输入用户名" name = 'userName'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label >密码:</label>
+                </td>
+                <td>
+                  <input type = 'password' placeholder="输入密码" name = 'password'>
+                </td>
+            </tr>
+
+              <tr>
+
+                  <td>
+                       <input type = 'submit' placeholder="Login" value="登录">
+                  </td>
+              </tr>
+        </form>
+        <a style="color: red" href="https://github.com/login/oauth/authorize?client_id=3119f2cfaba8fae78dc0&scope=fce588b67f746578afe1703143eeeec65e369bb4">Github Login</a>
+    </table>
+</div>
+<br>
+<div style="border: 1px solid red">
+    <h2>单点登录</h2>
+    <table>
+        <tr>
+            <th>
+               <img src="/static/images/github24.png" class="type" alt="GITHUB" />
+            </th>
+            <th>
+                <a href="{% url 'github_login' %}">GITHUB</a>&nbsp;
+            </th>
+        </tr>
+    </table>
+</div>
+<br />
+</body>
+</html>
