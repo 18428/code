@@ -6,5 +6,6 @@ html = '<img src="http://p1.pstatp.com/large/pgc-image/793019a3a9c046018c1a9b090
 url = re.findall(pattern, html)
 print(url)
 
+# 具有转义字符的时候替换会有问题，目前母鸡啥情况
 out = re.sub(pattern, '要替换的路径', html)
 print(out)
